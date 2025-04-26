@@ -7,7 +7,12 @@ public class RandomStringChooser
     for(int i = 0; i < list.length; i++)
       aList.add(list[i]);
   }
-  public String getNext
+  public String getNext(){
+    if(aList.size() == 0)
+      return "NONE";
+    int i = (int)(Math.random()*aList.size());
+    return aList.remove(i);
+  }
   //Heads up! 
   //You will get a very confusing error message until you have working code in part b as well
 }
